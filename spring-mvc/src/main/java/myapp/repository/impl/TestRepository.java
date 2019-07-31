@@ -1,7 +1,7 @@
 package myapp.repository.impl;
 
 import myapp.repository.ITestRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * テスト用のリポジトリです。
  */
-@Service
+@Repository
 public class TestRepository implements ITestRepository {
 
     /**
