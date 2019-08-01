@@ -27,8 +27,8 @@ dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
 
     // junit 5
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.1'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.1'
 
     // mockito 全般
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
