@@ -2,7 +2,7 @@ myapp:
   api:
     qiita:
       url: https://qiita.com
-      host: aaa
+      timeout: 200
     yahoo:
       url: https://yahoo.co.jp
       timeout: 100

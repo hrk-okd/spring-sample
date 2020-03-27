@@ -2,10 +2,11 @@ package mvc.service;
 
 import lombok.RequiredArgsConstructor;
 import mvc.model.QiitaUserInfo;
+import mvc.model.QiitaUserInfoView;
 import mvc.repository.IQiitaRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import static java.util.Objects.isNull;
 
 /**
  * Qiitaアクセス用のサービスです。
@@ -25,8 +26,17 @@ public class QiitaService {
      * @return 実行結果
      */
     public String execute() {
-        return Optional.ofNullable(qiitaRepository.getUserInfo("hrk_okd"))
-                .map(QiitaUserInfo::toString)
-                .orElse(null);
+        QiitaUserInfo userInfo = qiitaRepository.getUserInfo("hrk_okd");
+        if (isNull(userInfo)) {
+            return null;
+        }
+
+        QiitaUserInfoView userInfoView = QiitaUserInfoView.builder()
+                .id(userInfo.getId())
+                .itemsCount(userInfo.getItemsCount())
+                .websiteUrl(userInfo.getWebsiteUrl())
+                .build();
+
+        return userInfoView.toString();
     }
 }

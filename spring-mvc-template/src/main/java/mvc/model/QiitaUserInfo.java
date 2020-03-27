@@ -21,14 +21,26 @@ public class QiitaUserInfo {
      */
     private String facebookId;
 
+    /**
+     * フォロー数です。
+     */
     private int followeesCount;
 
+    /**
+     * フォロワー数です。
+     */
     private int followersCount;
 
     private String githubLoginName;
 
+    /**
+     * QiitaのIDです。
+     */
     private String id;
 
+    /**
+     * 投稿数です。
+     */
     private int itemsCount;
 
     private String linkedinId;
