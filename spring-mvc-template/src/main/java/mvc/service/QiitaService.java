@@ -1,8 +1,11 @@
 package mvc.service;
 
 import lombok.RequiredArgsConstructor;
+import mvc.model.QiitaUserInfo;
 import mvc.repository.IQiitaRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * Qiitaアクセス用のサービスです。
@@ -22,6 +25,8 @@ public class QiitaService {
      * @return 実行結果
      */
     public String execute() {
-        return qiitaRepository.get("hrk_okd");
+        return Optional.ofNullable(qiitaRepository.getUserInfo("hrk_okd"))
+                .map(QiitaUserInfo::toString)
+                .orElse(null);
     }
 }

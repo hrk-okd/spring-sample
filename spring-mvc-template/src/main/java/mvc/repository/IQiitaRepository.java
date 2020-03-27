@@ -1,5 +1,6 @@
 package mvc.repository;
 
+import mvc.model.QiitaUserInfo;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
@@ -15,5 +16,5 @@ public interface IQiitaRepository {
      * @return 処理結果
      */
     @Nullable
-    String get(@NonNull final String userId);
+    QiitaUserInfo getUserInfo(@NonNull final String userId);
 }

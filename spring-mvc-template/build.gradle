@@ -44,4 +44,9 @@ dependencies {
     // mockito assertThat().isEqualTo
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.13.0'
+
+    // JSONパーサ
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.3'
+
 }
