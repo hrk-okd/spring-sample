@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'spring-template'
+version '1.0-SNAPSHOT'
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot
+//    compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.1.9.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.9.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.9.RELEASE'
+
+    // thymeleaf
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.9.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+
+    // junit 5
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.1'
+
+    // mockito 全般
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '3.0.0'
+
+    // mockito ExtendWith
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.0.0'
+
+    // mockito assertThat().isEqualTo
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.13.0'
+
+    // JSONパーサ
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.3'
+
+}
